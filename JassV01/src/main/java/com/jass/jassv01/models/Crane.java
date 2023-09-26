@@ -23,16 +23,16 @@ public class Crane {
     public Crane() {
     }
 
-    public Crane(String name, int material, int components, int productionWork, int paint, int assemblyWork, int cargo, Demand demand) {
-        this.name = name;
-        this.material = material;
-        this.components = components;
-        this.productionWork = productionWork;
-        this.paint = paint;
-        this.assemblyWork = assemblyWork;
-        this.cargo = cargo;
-        this.demand = demand;
-    }
+//    public Crane(String name, int material, int components, int productionWork, int paint, int assemblyWork, int cargo, Demand demand) {
+//        this.name = name;
+//        this.material = material;
+//        this.components = components;
+//        this.productionWork = productionWork;
+//        this.paint = paint;
+//        this.assemblyWork = assemblyWork;
+//        this.cargo = cargo;
+//        this.demand = demand;
+//    }
 
     public String getName() {
         return name;
