@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail zakazky</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<h1 th:text="${contract.getDemand().getCompanyName()}"></h1>
+<h1 th:text="${contract.getDemand().getId()}"></h1>
+<table>
+    <thead>
+    <tr>
+        <th>Hodiny</th>
+    </tr>
+    <tr>
+        <th>Jeraby</th>
+    </tr>
+    <tr>
+        <th>Drahy</th>
+    </tr>
+    <tr>
+        <th>Datum dodání</th>
+        <th>Datum dodání</th>
+    </tr>
+    </thead>
+    <tbody>
+<!--    <tr th:each="fox, iterator : ${foxes}">-->
+<!--        <td th:text="${fox.getName()}"></td>-->
+<!--    </tr>-->
+    </tbody>
+</table>
+
+</body>
+</html>

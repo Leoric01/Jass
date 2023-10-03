@@ -13,23 +13,16 @@ public class Demand {
     private int number;
 
     private String companyName;
+
+    private String description;
     @OneToOne
     private Contract contract;
-    @OneToMany
-    private List<Crane> cranes;
-    @ManyToMany
-    private List<Employee> employees;
-
+    @OneToOne
+    private Offer offer;
     public Demand() {
     }
 
-    public Demand(int number, String companyName, Contract contract, List<Crane> cranes, List<Employee> employees) {
-        this.number = number;
-        this.companyName = companyName;
-        this.contract = contract;
-        this.cranes = cranes;
-        this.employees = employees;
-    }
+
 
     public String getCompanyName() {
         return companyName;
@@ -47,20 +40,20 @@ public class Demand {
         this.contract = contract;
     }
 
-    public List<Crane> getCranes() {
-        return cranes;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCranes(List<Crane> cranes) {
-        this.cranes = cranes;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public List<Employee> getEmployees() {
-        return employees;
+    public Offer getOffer() {
+        return offer;
     }
 
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
+    public void setOffer(Offer offer) {
+        this.offer = offer;
     }
 
     public int getNumber() {

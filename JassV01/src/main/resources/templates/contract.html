@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Zakazky</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div th:replace="fragments/navTop :: toplinks"></div>
+<div>
+    <h1>Zakazky</h1>
+</div>
+<div>
+    <h1 th:text="'Vyber zakazku pro zobrazeni detailu'"></h1>
+</div>
+<h1 th:text="${errorMsg}"></h1>
+<div>
+    <form th:action="@{/contractnumber}" method="post">
+        <label for="number">Číslo zakázky</label>
+        <input type="number" id="number" name="number" required>
+<!--        <label for="drinks">Drink</label>-->
+<!--        <select id="drinks" name="drinks">-->
+<!--            <option th:each="drink : ${drinks}" th:text="${drink.getName()}"></option>-->
+<!--        </select>-->
+        <input type="submit" value="Zobrazit">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Poptávky</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div th:replace="fragments/navTop :: toplinks"></div>
+<div>
+    <h1>Poptávky</h1>
+</div>
+<div>
+    <h1 th:text="${msg}"></h1>
+</div>
+<div>
+    <div>
+        <h1 th:text="'Zobraz poptávku'"></h1>
+    </div>
+    <form th:action="@{/demandnumber}" method="post">
+        <label for="number">Číslo poptávky </label>
+        <input type="number" id="number" name="number" required>
+        <input type="submit" value="Zobrazit">
+    </form>
+</div>
+<div>
+    <div>
+        <h1 th:text="'Zadat poptávku'"></h1>
+    </div>
+    <form th:action="@{/createdemand}" method="post">
+        <label for="demandNumber">Číslo poptávky </label>
+        <input type="number" id="demandNumber" name="demandNumber" required>
+
+        <label for="companyName">Jméno klienta</label>
+        <input type="text" id="companyName" name="companyName" required>
+
+        <label for="demandDescription">Zadání</label>
+        <textarea id="demandDescription" name="demandDescription" rows="4" cols="50"></textarea>
+
+        <input type="submit" value="Odeslat">
+    </form>
+</div>
+</body>
+</html>

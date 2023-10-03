@@ -18,12 +18,12 @@ public class Crane {
     private int assemblyWork;
     private int cargo;
     @ManyToOne
-    private Demand demand;
+    private Offer offer;
 
     public Crane() {
     }
 
-    public Crane(String name, int material, int components, int productionWork, int paint, int assemblyWork, int cargo, Demand demand) {
+    public Crane(String name, int material, int components, int productionWork, int paint, int assemblyWork, int cargo, Offer offer) {
         this.name = name;
         this.material = material;
         this.components = components;
@@ -31,7 +31,7 @@ public class Crane {
         this.paint = paint;
         this.assemblyWork = assemblyWork;
         this.cargo = cargo;
-        this.demand = demand;
+        this.offer = offer;
     }
 
     public String getName() {
@@ -90,12 +90,12 @@ public class Crane {
         this.cargo = cargo;
     }
 
-    public Demand getDemand() {
-        return demand;
+    public Offer getOffer() {
+        return offer;
     }
 
-    public void setDemand(Demand demand) {
-        this.demand = demand;
+    public void setOffer(Offer offer) {
+        this.offer = offer;
     }
 
     public void setId(Long id) {

@@ -10,6 +10,8 @@ public class Contract {
     @OneToOne
     private Demand demand;
 
+    private int number;
+
 
     public Contract() {
     }

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Zpracovani zakazek</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-
+<div th:replace="fragments/navTop :: toplinks"></div>
+<div>
+    <h1 th:text="'Zvolte kam prejit'"></h1>
+</div>
+<div>
+    <img th:src="@{/assets/image.jpeg}" alt="¨jerab">
+</div>
 </body>
 </html>
