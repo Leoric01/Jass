@@ -34,6 +34,11 @@ public class Offer {
         this.employees = employees;
     }
 
+    public Offer(int number, String companyName) {
+        this.number = number;
+        this.companyName = companyName;
+    }
+
     public Offer(int number, String companyName, Demand demand) {
         this.number = number;
         this.companyName = companyName;
