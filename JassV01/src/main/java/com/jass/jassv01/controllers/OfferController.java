@@ -55,7 +55,6 @@ public class OfferController {
     @GetMapping("/offerdetail/{id}")
     public String offerDetail(@PathVariable Integer id,Model model){
         Offer offer = offerService.getOfferByNumber(id);
-
         return "offerdetail";
     }
 

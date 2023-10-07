@@ -5,10 +5,14 @@ import com.jass.jassv01.repositories.OfferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
-public class OfferServiceImpl implements OfferService{
+public class OfferServiceImpl implements OfferService {
 
     private final OfferRepository offerRepository;
+
     @Autowired
     public OfferServiceImpl(OfferRepository offerRepository) {
         this.offerRepository = offerRepository;
@@ -21,9 +25,12 @@ public class OfferServiceImpl implements OfferService{
 
     @Override
     public Offer getOfferByNumber(Integer number) {
-        if (offerRepository.findByNumber(number).isPresent()){
-            return offerRepository.findByNumber(number).get();
+        List<Optional<Offer>> offers = offerRepository.findByNumber(number);
+
+        if (!offers.isEmpty()) {
+            return offers.get(0).get();
+        } else {
+            return null;
         }
-        return null;
     }
 }
